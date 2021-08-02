@@ -1,0 +1,38 @@
+## CSE 331 hw-setup Questions
+## Part 6
+
+1. Why did Fibonacci fail the testThrowsIllegalArgumentException< test? What (if anything) did
+you have to do to fix it? If you did not have to change anything to fix this issue, explain why.
+
+The 0th term in the fibonacci sequence is 1, but anything 0 or below was considered negative
+and therefore invalid. To solve this issue I made it so the program did not include
+0 as a negative number (n < 0 instead of n <=0), so it would be counted as less than
+or equal to 2 instead. All numbers less than or equal to 2 that are not negative return 1.
+
+
+2. Why did Fibonacci fail the testBaseCase test? What (if anything) did you have to do to fix
+it? If you did not have to change anything to fix this issue, explain why.
+
+I did not have to do anything as the base cases 0 and 1 are both equal to or less
+than two as the test requires. They are not less than 0 either so both count
+as a base case and all base cases return 1. (Note when program is changed latter on
+they are both less than 2 instead of less than or equal to 2)
+
+
+3.Why did Fibonacci fail the testInductiveCase test? What (if anything) did you have to do to
+fix it? If you did not have to change anything to fix this issue, explain why.
+
+Issue 1: This test failed because the input, 2, is less than or equal to 2
+to solve this (n <= 2) simply needed to be changed to (n < 2).
+This did not change any other answer as none of the other inputs were
+equal to 2.
+
+Issue 2: the test failed because for some reason the program was subtracting fibonacci
+sequence terms instead of adding them together. Simply turning
+getFibTerm(n - 1) - getFibTerm(n - 2) into getFibTerm(n - 1) + getFibTerm(n - 2)
+fixed the issue
+
+
+The method I will use to return volume will be to
+keep track of the amount of volume so that the operation
+can be run in O(1) time!

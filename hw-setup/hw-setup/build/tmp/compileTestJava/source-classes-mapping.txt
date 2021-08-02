@@ -1,0 +1,12 @@
+setup/BallContainerTest.java
+ setup.BallContainerTest
+setup/FibonacciTest.java
+ setup.FibonacciTest
+setup/RandomHelloTest.java
+ setup.RandomHelloTest
+setup/HolaWorldTest.java
+ setup.HolaWorldTest
+setup/BallTest.java
+ setup.BallTest
+setup/BoxTest.java
+ setup.BoxTest

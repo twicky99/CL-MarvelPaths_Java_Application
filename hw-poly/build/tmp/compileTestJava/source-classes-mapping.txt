@@ -1,0 +1,10 @@
+poly/RatNumTest.java
+ poly.RatNumTest
+poly/RatNumSmallTest.java
+ poly.RatNumSmallTest
+poly/RatPolyTest.java
+ poly.RatPolyTest
+poly/RatPolyStackTest.java
+ poly.RatPolyStackTest
+poly/RatTermTest.java
+ poly.RatTermTest

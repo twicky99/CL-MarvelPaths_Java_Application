@@ -1,0 +1,101 @@
+## CSE 331 hw-poly Questions
+## Part 0
+###########################################################################
+
+1. Division Pseudocode
+
+u/v=q
+q=0
+
+difference = highest degree term polynomial of u/highest degree term polynomial of v
+
+Inv: {{q=difference_0+...+difference_i-1}}
+Loop while (highest degree of u >= highest degree of v){
+int difference = highest degree term polynomial of u/highest degree term polynomial of v
+int sub = v times difference
+subtract sub from u
+add difference to q}
+return q;
+
+2. Division Example: (x^3+x-1) / (x+1) = x^2-x+2
+
+u=x^3+x-1
+v=(x+1)
+q=0
+Inv:{{q(0)=0 true}}
+Loop while (highest degree of u (3) >= highest degree of v (1) is true){
+int difference =  x^3/x
+int sub = (x+1)*x^2
+u=x^3+x-1-(x^3+x^2))
+q=0+x^2}
+
+u=-x^2+x-1
+v=(x+1)
+q=x^2
+Inv:{{q(x^2)=difference_0 (x^2) true}}
+Loop while (highest degree of u (2) >= highest degree of v (1) is true){
+int difference =  -x^2/x
+int sub = -x*(x+1)
+u=-x^2+x-1-(-x^2-x)
+q=x^2-x}
+
+u=2x-1
+v=(x+1)
+q=x^2-x
+Inv:{{q(x^2-x)=difference_0 (x^2)+difference_1 (-x) true}}
+Loop while (highest degree of u (1) >= highest degree of v (1) is true){
+int difference =  2x/x
+int sub = (x+1)*2
+u=2x-1-(2x+2)
+q=x^2-x+2}
+
+u=-3
+v=(x+1)
+q=x^2-x+2
+Inv:Inv:{{q(x^2-x+2)=difference_0 (x^2)+difference_1 (-x)+difference_2 (2) true}}
+Loop while (highest degree of u (0) >= highest degree of v (1) is false){
+return x^2-x+2;
+
+## Part 1
+###########################################################################
+
+1. Weakened Rep Invariant
+
+gcd would be scrapped as there is no need to simplify. RatNum(int n, int d) would just assign numer = n
+and denom = d if d>=0 else numer = -n and denom = -d. Check rep would only assert (denom >= 0).
+
+2. Alternate add, sub, mul, div
+
+This would require an affect clause because this would
+cause RatNum modify it's denom and numer instead of making a
+new RatNum object. The requires clause would also require that the inputs were already simplified
+and that the denomExpr >= 0 and the RatNum would need to be mutable.
+
+3. Constructor checkReps
+
+Everything is null and no fields have been initialized.
+
+
+## Part 2
+###########################################################################
+
+1. Calls to checkRep in RatTerm
+
+A call to checkRep() was occurred whenever change was made. This included when objects
+were created so every constructor called checkRep() at the end after the new RatTerm was
+changed. Because RatTerm is immutable, checkRep() was only called when a RatTerm was
+created. This was always at the end of methods as the only reason to create a RatTerm
+is if you are returning a RatTerm and therefore creating a RatTerm is the last thing you
+are doing.
+
+
+## Part 3
+###########################################################################
+
+1. Calls to checkRep in RatPoly
+
+A call to checkRep() was occurred whenever change was made. This included when objects
+were created so every constructor called checkRep() at the end after the new RatPoly was
+changed. Because RatPoly's terms can be edited, checkRep() had to be called whenever terms was
+edited. This occurred often at the beginning and end of many methods.
+

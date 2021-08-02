@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"shortestPath","l":"StringGraphNeighbors.Edge"},{"p":"shortestPath","l":"Paths"},{"p":"shortestPath","l":"StringGraphNeighbors"}]

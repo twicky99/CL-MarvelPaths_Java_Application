@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="setup.RandomHelloTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-07-15T21:37:22" hostname="DESKTOP-MCODU8R" time="0.006">
+  <properties/>
+  <testcase name="testGreetings" classname="setup.RandomHelloTest" time="0.003"/>
+  <testcase name="testCrash" classname="setup.RandomHelloTest" time="0.002"/>
+  <system-out><![CDATA[Ciao Mondo
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
