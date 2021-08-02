@@ -1,0 +1,15 @@
+-classpath 'C:\\Users\\jaden\\Desktop\\cse331-21su-jadens5\\hw-graph\\build\\classes\\java\\main;C:\\Users\\jaden\\Desktop\\cse331-21su-jadens5\\hw-graph\\build\\resources\\main;C:\\Users\\jaden\\Desktop\\cse331-21su-jadens5\\libs\\shortestPath.jar'
+-d 'C:\\Users\\jaden\\Desktop\\cse331-21su-jadens5\\hw-graph\\build\\docs\\javadoc'
+-doctitle 'hw-graph API'
+-notimestamp 
+-quiet 
+-tag 'spec.modifies:a:Modifies:'
+-tag 'spec.effects:a:Effects:'
+-tag 'spec.requires:a:Requires:'
+-tag 'spec.specfield:a:Specfield:'
+-tag 'spec.derivedfield:a:Derived Field:'
+-windowtitle 'hw-graph API'
+'C:\\Users\\jaden\\Desktop\\cse331-21su-jadens5\\hw-graph\\src\\main\\java\\graph\\Graph.java'
+'C:\\Users\\jaden\\Desktop\\cse331-21su-jadens5\\hw-graph\\src\\main\\java\\intQueue\\IntQueue1.java'
+'C:\\Users\\jaden\\Desktop\\cse331-21su-jadens5\\hw-graph\\src\\main\\java\\intQueue\\IntQueue2.java'
+'C:\\Users\\jaden\\Desktop\\cse331-21su-jadens5\\hw-graph\\src\\main\\java\\intQueue\\Test.java'

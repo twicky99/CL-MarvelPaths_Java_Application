@@ -1,0 +1,21 @@
+#Create a Graph
+
+created graph g1
+
+#Add two nodes to the graph
+
+added node n1 to g1
+added node n2 to g1
+
+#Add edge
+
+added edge e1 from n1 to n2 in g1
+
+#Add a loop edge
+
+added edge e2 from n1 to n1 in g1
+
+#Attempt to list children of Node
+
+the children of n1 in g1 are: []
+the children of n2 in g1 are: []

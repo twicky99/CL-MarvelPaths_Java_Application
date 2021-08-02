@@ -1,0 +1,61 @@
+## CSE 331 hw-graph Part 2 Questions
+
+NOTE: This file is used as part of hw-graph-part2, and is not due as part of the hw-graph-part1
+submission. You may leave it blank for hw-graph-part1.
+
+## Section 1
+###########################################################################
+
+A few examples of possible Graph representations:
+
+    A: A collection of nodes and a collection of edges.
+    B: An adjacency list, in which each node is associated with a list of its outgoing edges.
+    C: An adjacency matrix, which explicitly represents, for every pair ⟨A,B⟩ of edges, whether there is a link from A to B, and how many.
+
+1. In two or three sentences, explain an advantage and a disadvantage of each of the
+representations listed above (for example, in terms of runtime complexity, space
+complexity, or ease of implementation).
+
+A. It is easier and quicker to loop over all Nodes and edges as you can easily get a List of either.
+It would be harder to tell which Nodes go to which edges and which edges got to which Nodes as Nodes and Edges are not
+sorted together like in the other two representations.
+
+B. This approach would keep the code short and to the point/easier to implement as it would be easier to deal with Nodes in graph
+and deal with edges in Nodes and adding Nodes would be easier. Accessing a particular edge would be less efficient as you
+would have to check Nodes to access any edge.
+
+C. There would be a lot of unused space and holes in the array lowering efficiency especially when using
+a large number of nodes and or edges. It would be easier to associate which Nodes go to which edges and where an edge comes from.
+
+
+2. In two to three sentences, describe the representation you chose and explain why you
+chose it. If you chose to use a different representation than one of the three we described
+above, be sure to list its advantages and disadvantages, too.
+
+I chose to create an adjacency list in which each node is associated with a list of its outgoing edges.
+Each Node object remembers other Nodes and uses a Key to go from Node to Node and the Key is the Edge.
+I chose this method because it avoids unused space allocation and and was easier to implement.
+
+
+## Section 4
+###########################################################################
+
+    (Please keep your answers brief and to-the-point.)
+
+1. Describe any new tests you added and why you added them, or why you feel that your original
+tests alone are sufficient.
+
+I did not add any new tests as they ensure the specifications are met
+in different scenarios, but I did add a @before clause inorder to make
+the test more efficient!
+
+
+2. Did you make any changes to your specifications as you were implementing your Graph? (yes/no)
+If yes, describe your changes and why you made them.
+
+Yes, I made it so when popping a Node you do not have to remove all edges connecting to the Node
+as I felt that you should not delete anything without permission.
+Edited return from ListNodes to return the names of the Nodes as the assignment
+wants names and each Node does not keep track of it's own name.
+Changed name of second ListNodes method to ListChildren to match directions.
+

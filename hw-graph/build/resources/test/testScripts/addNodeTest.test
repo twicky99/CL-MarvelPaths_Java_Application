@@ -1,0 +1,7 @@
+#Create a Graph
+
+CreateGraph g1
+
+#Attempt to add a node to the graph
+
+AddNode g1 n1

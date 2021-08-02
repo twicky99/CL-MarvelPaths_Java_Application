@@ -1,0 +1,7 @@
+#Create a Graph
+
+created graph g1
+
+#Attempt to add a node to the graph
+
+added node n1 to g1

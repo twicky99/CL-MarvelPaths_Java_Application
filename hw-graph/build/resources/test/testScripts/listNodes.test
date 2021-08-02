@@ -1,0 +1,21 @@
+#Create a Graph
+
+CreateGraph g1
+
+#Add two nodes to the graph
+
+AddNode g1 n1
+AddNode g1 n2
+AddNode g1 n3
+
+#Add edge
+
+AddEdge g1 n1 n2 e1
+
+#Add a loop edge
+
+AddEdge g1 n1 n1 e2
+
+#Attempt to list all nodes in graph
+
+ListNodes g1

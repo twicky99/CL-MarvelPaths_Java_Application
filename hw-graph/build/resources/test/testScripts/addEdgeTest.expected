@@ -1,0 +1,16 @@
+#Create a Graph
+
+created graph g1
+
+#Add two nodes to the graph
+
+added node n1 to g1
+added node n2 to g1
+
+#Attempt to add edge
+
+added edge e1 from n1 to n2 in g1
+
+#Attempt to add a loop edge
+
+added edge e2 from n1 to n1 in g1

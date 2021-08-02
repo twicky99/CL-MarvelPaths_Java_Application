@@ -1,0 +1,16 @@
+#Create a Graph
+
+CreateGraph g1
+
+#Add two nodes to the graph
+
+AddNode g1 n1
+AddNode g1 n2
+
+#Attempt to add edge
+
+AddEdge g1 n1 n2 e1
+
+#Attempt to add a loop edge
+
+AddEdge g1 n1 n1 e2

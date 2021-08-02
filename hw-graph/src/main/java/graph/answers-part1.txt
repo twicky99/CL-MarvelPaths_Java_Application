@@ -1,0 +1,96 @@
+## CSE 331 hw-graph Part 1 Questions
+
+## Section 1
+###########################################################################
+
+1. Write an AF and RI for IntQueue1 and IntQueue2.
+
+    ### IntQueue1
+
+    Abstraction Function:
+IntQueue1(this) = Linked list of integers held in this.entries.
+Private List<Integers> entries;
+
+    Representation Invariant:
+{{entries != null; !entries.contains(null)}}
+
+
+
+    ### IntQueue2
+
+    Abstraction Function:
+IntQueue2(this) = A queue inside of a Linked list of integers this.entries with
+an initial size of INITIAL_SIZE. The queue starts at the index this.front in
+this.entries and continues for the length of this.size. potentially looping
+around the array if exceeding the length of this.entries.
+
+    Representation Invariant:
+{{0 <= front < entries.length; 0 <= size <= entries.length; entries != null}}
+
+
+
+2. Group the snapshots of IntQueue2's internal state into groups that have the same abstract state.
+
+c and f
+d and g
+
+
+3. For each signature below, state and justify in 1-2 sentences (per part) whether the method or constructor
+could possibly expose the representation, given the information available. Explain any assumptions you made.
+
+    a. `public int solveEquations(int x, int y, int z)`
+This method could not expose the representation as it returns an
+int and an int is not an object.
+
+    b. `public String[] decode(boolean slowly)`
+This method could not expose the representation as it returns a
+decoded String array. It does not return the original string.
+
+    c. `private Date myBirthday()`
+This method could not expose the representation as it is private and
+cannot be accessed outside of the class.
+
+    d. `public String toString()`
+This method could not expose the representation as it returns a
+String that is based off of private data. Additionally, Strings
+are immutable so internal data cannot be changed.
+
+    e. `public Iterator<Integer> elements()`
+This method could expose the representation if the iterator
+is a private object as it would be directly returning elements.
+
+    f. `public Deck(List<Card> cards)`
+This method could expose the representation as it returns Deck object
+and while I assume a Deck probably contains data from cards, it
+could also include other private objects.
+
+
+## Section 2
+###########################################################################
+
+Briefly explain why you included the operations you did and why you feel they are a sufficient
+interface to a graph. If your design includes multiple classes or interfaces, explain why you
+included each one; if not, explain whether you considered additional classes and why you decided
+not to include them.
+
+addNode and popNode were added so I could edit nodes in the graph
+isPresent and both listNodes methods exist so I can view these nodes
+both listNodes exist to improve my ability to view the nodes of my graph
+addEdge popEdge isEdge and edgeExists are also for viewing and
+editing the graph except for edges.
+private class Node was added to remember important data such as
+Node names and edge info are stored in Nodes allowing programming to be simpler
+
+
+
+## Section 3
+###########################################################################
+
+What was your testing strategy for this assignment? How do your script tests and JUnit tests
+differ from each other (if they do), and why?
+
+My testing strategy was to test each specification in multiple contents.
+My strategy for JUnit Test was the the same as both tests had specifications
+that needed to be met and multiple situations that may mistakenly be treated
+differently.
+
